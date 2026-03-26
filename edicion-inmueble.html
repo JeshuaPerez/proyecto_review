@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACME Inmobiliaria – Edición de Inmueble</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-box">
+      <div>
+        <div class="brand">acme</div>
+        <div class="sub">Inmobiliaria</div>
+      </div>
+    </div>
+    <span class="navbar-title">Gestión de Inmuebles</span>
+    <div class="navbar-user">
+      <div>
+        <div class="name">John Doe</div>
+        <span class="logout">Cerrar Sesión</span>
+      </div>
+      <div class="avatar">JD</div>
+    </div>
+  </nav>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active">Inmuebles</div>
+    <div class="tab">Usuarios</div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="card">
+
+      <!-- HEADER -->
+      <div class="card-header">
+        <h2 class="card-title">Edición de Inmueble</h2>
+        <button class="btn-close">✕</button>
+      </div>
+
+      <!-- BODY -->
+      <div class="card-body">
+
+        <!-- FOTO -->
+        <div class="photo-col">
+          <div class="photo-box">
+            <svg class="house-svg" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="10,50 70,10 130,50" fill="#2c3e50" opacity=".9"/>
+              <rect x="22" y="50" width="96" height="50" fill="#34495e"/>
+              <rect x="30" y="58" width="22" height="16" fill="#f0c040" opacity=".85"/>
+              <rect x="60" y="58" width="22" height="16" fill="#f0c040" opacity=".85"/>
+              <rect x="90" y="58" width="22" height="16" fill="#a8d8f0" opacity=".7"/>
+              <rect x="58" y="78" width="24" height="22" fill="#5d3a1a"/>
+              <circle cx="79" cy="89" r="2" fill="#f0c040"/>
+              <rect x="22" y="68" width="28" height="32" fill="#2c3e50"/>
+              <rect x="90" y="10" width="12" height="24" fill="#2c3e50"/>
+            </svg>
+            <div class="photo-overlay"><span>Cambiar foto</span></div>
+          </div>
+          <p class="photo-hint">Clic para cambiar</p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="form-col">
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="direccion">Dirección</label>
+              <input id="direccion" type="text" placeholder="Ej. CR. 101 # 25-98">
+            </div>
+
+            <div class="field">
+              <label for="tipo">Tipo</label>
+              <div class="select-wrap">
+                <select id="tipo">
+                  <option value="">Seleccionar…</option>
+                  <option>Casa</option>
+                  <option>Apartamento</option>
+                  <option>Local comercial</option>
+                  <option>Bodega</option>
+                  <option>Lote</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="ciudad">Ciudad</label>
+              <input id="ciudad" type="text" placeholder="Ej. Bogotá">
+            </div>
+
+            <div class="field">
+              <label for="departamento">Departamento</label>
+              <input id="departamento" type="text" placeholder="Ej. Cundinamarca">
+            </div>
+
+            <div class="field">
+              <label for="matricula">Matrícula Inmobiliaria</label>
+              <input id="matricula" type="text" placeholder="Ej. 50N-12345678">
+            </div>
+
+            <div class="field">
+              <label for="area">Área (m²)</label>
+              <input id="area" type="number" placeholder="0">
+            </div>
+
+            <div class="field">
+              <label for="propietario">Propietario</label>
+              <input id="propietario" type="text" placeholder="Nombre completo">
+            </div>
+
+            <div class="field">
+              <label for="identificacion">Identificación propietario</label>
+              <input id="identificacion" type="text" placeholder="Cédula / NIT">
+            </div>
+
+            <div class="field">
+              <label for="valor">Valor del inmueble</label>
+              <input id="valor" type="text" placeholder="$ 0">
+            </div>
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="uso-comercial">
+              <label for="uso-comercial">Uso comercial</label>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="card-footer">
+        <button class="btn-save">Guardar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="edicion-inmueble.js"></script>
+</body>
+</html>

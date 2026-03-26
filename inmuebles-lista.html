@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACME Gestión de Inmuebles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-box">
+      <div>
+        <div class="brand">acme</div>
+        <div class="sub">Inmobiliaria</div>
+      </div>
+    </div>
+    <span class="navbar-title">Gestión de Inmuebles</span>
+    <div class="navbar-user">
+      <div>
+        <div class="name">John Doe</div>
+        <span class="logout">Cerrar Sesión</span>
+      </div>
+      <div class="avatar">JD</div>
+    </div>
+  </nav>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active">Inmuebles</div>
+    <div class="tab">Usuarios</div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="search-wrap">
+        <input class="search-input" type="text" placeholder="Buscar…">
+        <button class="search-btn">
+          <svg viewBox="0 0 24 24" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      </div>
+      <button class="btn-new" id="btn-nuevo">+ Nuevo</button>
+    </div>
+
+    <!-- LISTA (renderizada por JS) -->
+    <div class="property-list" id="property-list"></div>
+
+    <!-- PAGINACIÓN (renderizada por JS) -->
+    <div class="pagination" id="paginacion"></div>
+
+  </div>
+
+  <!-- MODAL ELIMINAR -->
+  <div class="modal-overlay" id="modal-eliminar">
+    <div class="modal-box">
+      <h3 class="modal-title">Eliminar inmueble</h3>
+      <p class="modal-msg">¿Estás seguro de que deseas eliminar este inmueble? Esta acción no se puede deshacer.</p>
+      <div class="modal-actions">
+        <button class="modal-btn cancel" id="modal-cancel">Cancelar</button>
+        <button class="modal-btn confirm" id="modal-confirm">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="inmuebles-lista.js"></script>
+</body>
+</html>
